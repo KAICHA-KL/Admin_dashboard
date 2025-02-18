@@ -1,7 +1,7 @@
 /* Define root variables for colors and typography */
 :root {
   /* Color palette */
-  --color-primary: rgb(230, 230, 230);
+  --color-primary: rgba(107, 92, 158, 0.726);
   --color-white: #ffffff;
   --color-black: #404040;
   --color-gray-100: #f8f8f8;
@@ -129,7 +129,151 @@ button:hover {
   border-color: var(--color-gray-500);
 }
 
-/* Projects Section */
+/* Update the projects section styling */
 .projects {
-  background: var(--color-primary);
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  background: var(--color-gray-200);
+  padding: var(--spacing-xl);
+  height: 100%; /* Fill available space */
+  gap: var(--spacing-xl); /* Equal spacing between cards */
+}
+
+/* Cards Container */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  grid-template-rows: repeat(3, 1fr); /* 3 equal rows */
+  gap: var(--spacing-xl); /* Equal spacing between cards */
+  height: 100%; /* Take full height of projects section */
+  max-width: 1000px; /* Prevent cards from stretching too wide */
+  min-width: 500px;
+  margin: 0 auto; /* Center the grid */
+}
+
+/* Individual Card */
+.card {
+  background: var(--color-white);
+  border-radius: var(--border-radius);
+  border-style: solid;
+  border-color: var(--color-black);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-default);
+  position: relative;
+  height: 200px; /* Fixed height for consistency */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Card Title */
+.card h3 {
+  margin: 0 0 var(--spacing-md);
+  color: var(--color-black);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+}
+
+/* Card Paragraph */
+.card p {
+  margin: 0;
+  color: var(--color-black);
+  font-size: var(--font-size-sm);
+  line-height: 1.5;
+  flex-grow: 1; /* Allows content to push icons to bottom */
+}
+
+/* Icons Container */
+.card .icons {
+  display: flex;
+  gap: var(--spacing-sm);
+  justify-content: flex-end; /* Aligns icons to the right */
+  margin-top: var(--spacing-md);
+}
+
+/* Individual Icons */
+.card .icons i {
+  color: var(--color-black);
+  font-size: var(--font-size-sm);
+  opacity: 0.6;
+}
+
+/* Hover effect for cards */
+.card:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+/* Hover effect for icons */
+.card .icons i:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.news-container {
+  display: grid;
+  grid-template-columns: 1fr; /* 3 equal columns */
+  grid-template-rows: 1fr; /* 3 equal rows */
+  gap: var(--spacing-xl); /* Equal spacing between cards */
+  height: 100%; /* Take full height of projects section */
+  max-width: 1000px; /* Prevent cards from stretching too wide */
+  margin: 0 auto; /* Center the grid */
+}
+
+.news {
+  background: var(--color-white);
+  border-radius: var(--border-radius);
+  border-style: solid;
+  border-color: var(--color-primary);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-default);
+  position: relative;
+  height: 400px; /* Fixed height for consistency */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Card Title */
+.news h3 {
+  margin: 0 0 var(--spacing-md);
+  color: var(--color-black);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+}
+
+/* Card Paragraph */
+.news p {
+  margin: 0;
+  color: var(--color-black);
+  font-size: var(--font-size-sm);
+  line-height: 1.5;
+  flex-grow: 1; /* Allows content to push icons to bottom */
+}
+
+/* Icons Container */
+.news .icons {
+  display: flex;
+  gap: var(--spacing-sm);
+  justify-content: flex-end; /* Aligns icons to the right */
+  margin-top: var(--spacing-md);
+}
+
+/* Individual Icons */
+.news .icons i {
+  color: var(--color-black);
+  font-size: var(--font-size-sm);
+  opacity: 0.6;
+}
+
+/* Hover effect for cards */
+.news:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+/* Hover effect for icons */
+.news .icons i:hover {
+  opacity: 1;
+  cursor: pointer;
 }
