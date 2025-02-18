@@ -3,14 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dashboard</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Added Google Fonts for Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4fcd9c3395.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<div class="container">
-    <div class="navigator">navigator</div>
-    <div class="header">header</div>
-    <div class="projects">projects</div>
-</div>
+    <!-- Main container for the dashboard layout -->
+    <div class="container">
+        <!-- Left sidebar navigation -->
+        <nav class="navigator">
+            <!-- Dashboard title -->
+            <h1 class="title">Dashboard</h1>
+            <!-- Navigation menu items -->
+            <div class="nav-items">
+                <!-- Each nav-link represents a menu item with an icon and text -->
+                <a class="nav-link"><i class="fa-solid fa-house"></i>Home</a>
+                <a class="nav-link"><i class="fa-solid fa-user"></i>Profile</a>
+                <a class="nav-link"><i class="fa-solid fa-message"></i>Messages</a>
+                <a class="nav-link"><i class="fa-solid fa-question"></i>History</a>
+                <a class="nav-link"><i class="fa-solid fa-list-check"></i>Tasks</a>
+            </div>
+        </nav>
+        
+        <!-- Top header section -->
+        <header>
+            <!-- Search and notification area -->
+            <div class="search-area">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="search" placeholder="Search...">
+                <i class="fa-solid fa-bell"></i>
+                <i class="fa-brands fa-slack"></i>
+                <span>Administrator</span>
+            </div>
+            <!-- User welcome and action buttons -->
+            <div class="action-area">
+                <i class="fa-brands fa-slack"></i>
+                <h1>Hi Siddharth!</h1>
+                <!-- Action buttons container -->
+                <div class="buttons">
+                    <button>New</button>
+                    <button>Upload</button>
+                    <button>Share</button>
+                </div>
+            </div>
+        </header>
+        
+        <!-- Main content area for projects -->
+        <main class="projects">projects</main>
+    </div>
 </body>
 </html>
